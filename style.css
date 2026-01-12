@@ -4,3 +4,16 @@
   font-family: Poppins, sans-serif;
   box-sizing: border-box;
 }
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100vh;
+  background-color:aquamarine;
+}
+.container{
+  width:450px;
+  background-color: white;
+  border-radius:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
