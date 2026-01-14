@@ -12,9 +12,9 @@ body {
   background-color: #fff6cc;
 }
 .container {
-  width: 450px;
+  width: 550px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 8px 20px rgba(255, 204, 128, 0.4);
 }
 .container h2 {
