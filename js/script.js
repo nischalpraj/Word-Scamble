@@ -1,6 +1,12 @@
 const initgame = () => {
   let randomObj = words[Math.floor(Math.random() * words.length)]; // getting random object from words
   let wordsArray = randomObj.word.split(""); // splitting each letter of word
-  console.log(wordsArray);
+  for (let i = wordsArray.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1)); // getting random number
+    let temp = wordsArray[i];
+    wordsArray[i] = wordsArray[j];
+    wordsArray[j] = temp;
+  }
+  console.log(wordsArray, randomObj.word);
 };
 initgame();
