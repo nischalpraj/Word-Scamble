@@ -57,14 +57,14 @@ body {
 }
 .buttons button {
   border: none;
-  outline:none;
-  padding:15px 0px;
-  width:calc(100% / 2 - 10px);
-  font-size:18px;
-  font-weight:500;
-  border-radius:10px;
-  cursor:pointer;
-  color:#ffffff;
+  outline: none;
+  padding: 15px 0px;
+  width: calc(100% / 2 - 10px);
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #ffffff;
 }
 .refresh-word {
   background-color: #6c757d;
