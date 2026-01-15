@@ -1,5 +1,6 @@
 const wordText = document.querySelector(".word"),
-  hintText = document.querySelector(".hint span");
+  hintText = document.querySelector(".hint span"),
+  refreshBtn = document.querySelector(".refresh-word");
 
 const initgame = () => {
   let randomObj = words[Math.floor(Math.random() * words.length)]; // getting random object from words
@@ -15,3 +16,5 @@ const initgame = () => {
   console.log(wordsArray, randomObj.word);
 };
 initgame();
+
+refreshBtn.addEventListener("click", initgame);
