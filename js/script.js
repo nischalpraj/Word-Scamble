@@ -4,7 +4,16 @@ const wordText = document.querySelector(".word"),
   refreshBtn = document.querySelector(".refresh-word"),
   checkBtn = document.querySelector(".check-word");
 
-let correctwords;
+let correctwords, timer;
+
+const initTime = (maxtime) => {
+  timer = setInterval(() => {
+    if (maxtime > 0) {
+      maxtime--;
+    }
+  }, 1000);
+};
+
 const initgame = () => {
   let randomObj = words[Math.floor(Math.random() * words.length)]; // getting random object from words
   let wordsArray = randomObj.word.split(""); // splitting each letter of word
