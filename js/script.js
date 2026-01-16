@@ -1,6 +1,7 @@
 const wordText = document.querySelector(".word"),
   hintText = document.querySelector(".hint span"),
   inputField = document.querySelector("input"),
+  timeText=document.querySelector(".time b"),
   refreshBtn = document.querySelector(".refresh-word"),
   checkBtn = document.querySelector(".check-word");
 
@@ -10,6 +11,7 @@ const initTime = (maxtime) => {
   timer = setInterval(() => {
     if (maxtime > 0) {
       maxtime--;
+      timeText.innerText = maxtime;
     }
   }, 1000);
 };
@@ -44,3 +46,4 @@ const checkWord = () => {
 
 refreshBtn.addEventListener("click", initgame);
 checkBtn.addEventListener("click", checkWord);
+timeText.addEventListener()
