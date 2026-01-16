@@ -1,7 +1,7 @@
 const wordText = document.querySelector(".word"),
   hintText = document.querySelector(".hint span"),
   inputField = document.querySelector("input"),
-  timeText=document.querySelector(".time b"),
+  timeText = document.querySelector(".Time b"),
   refreshBtn = document.querySelector(".refresh-word"),
   checkBtn = document.querySelector(".check-word");
 
@@ -11,13 +11,13 @@ const initTime = (maxtime) => {
   timer = setInterval(() => {
     if (maxtime > 0) {
       maxtime--;
-      timeText.innerText = maxtime;
+      timeText.innerText = maxtime + "s";
     }
   }, 1000);
 };
 
 const initgame = () => {
-  initTime(25);//calling initTime function 
+  initTime(25); //calling initTime function
   let randomObj = words[Math.floor(Math.random() * words.length)]; // getting random object from words
   let wordsArray = randomObj.word.split(""); // splitting each letter of word
   for (let i = wordsArray.length - 1; i > 0; i--) {
@@ -46,4 +46,3 @@ const checkWord = () => {
 
 refreshBtn.addEventListener("click", initgame);
 checkBtn.addEventListener("click", checkWord);
-timeText.addEventListener()
