@@ -13,10 +13,11 @@ const initTime = (maxtime) => {
     if (maxtime > 0) {
       maxtime--;
       timeText.innerText = maxtime + "s";
+    } else {
+      clearInterval(timer);
+      alert(`Time up! ${correctwords.toUpperCase()} was the correct word`);
+      initgame(); // restarting the game after time is up
     }
-    clearInterval(timer);
-    alert(`Time up! ${correctwords.toUpperCase()} was the correct word`);
-    initgame();// restarting the game after time is up
   }, 1000);
 };
 
