@@ -27,6 +27,7 @@ const checkWord = () => {
   if (userWord !== correctwords)
     return alert(`Oops! ${userWord} is not a correct word`);
   alert(`Congrats! ${userWord.toUpperCase()} is a correct word`);
+  initgame();
 };
 
 refreshBtn.addEventListener("click", initgame);
