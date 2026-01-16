@@ -8,11 +8,15 @@ const wordText = document.querySelector(".word"),
 let correctwords, timer;
 
 const initTime = (maxtime) => {
+  clearInterval(timer);
   timer = setInterval(() => {
     if (maxtime > 0) {
       maxtime--;
       timeText.innerText = maxtime + "s";
     }
+    clearInterval(timer);
+    alert(`Time up! ${correctwords.toUpperCase()} was the correct word`);
+    initgame();// restarting the game after time is up
   }, 1000);
 };
 
