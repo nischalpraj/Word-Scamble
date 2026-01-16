@@ -17,6 +17,8 @@ const initgame = () => {
   wordText.innerText = wordsArray.join(""); //passing shuffled word as word text
   hintText.innerText = randomObj.hint; //passing hint as hint text
   correctwords = randomObj.word.toLocaleLowerCase(); //passing word to correctword variable
+  inputField.value = ""; //making input field blank
+  inputField.setAttribute("maxlength", correctwords.length); //setting input max length attribute
   console.log(wordsArray, randomObj.word);
 };
 initgame();
