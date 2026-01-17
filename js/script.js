@@ -36,15 +36,19 @@ const initgame = () => {
   correctwords = randomObj.word.toLocaleLowerCase(); //passing word to correctword variable
   inputField.value = ""; //making input field blank
   inputField.setAttribute("maxlength", correctwords.length); //setting input max length attribute
-  console.log(wordsArray, randomObj.word);
 };
 initgame();
 
 const checkWord = () => {
   let userWord = inputField.value.toLocaleLowerCase(); //getting user value
-  if (!userWord) return alert("Please enter a word to check!");
-  if (userWord !== correctwords)
-    return alert(`Oops! ${userWord} is not a correct word`);
+  if (!userWord)
+    return Swal.fire({
+      title: "Warning",
+      text: "Please enter a word to check!",
+      icon: "warning",
+      confirmButtonText: "OK",
+    });
+
   alert(`Congrats! ${userWord.toUpperCase()} is a correct word`);
   initgame();
 };
