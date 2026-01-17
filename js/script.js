@@ -55,7 +55,12 @@ const checkWord = () => {
       icon: "error",
       confirmButtonText: "Try Again",
     });
-  alert(`Congrats! ${userWord.toUpperCase()} is a correct word`);
+  Swal.fire({
+    title: "Congratulations!",
+    text: `${userWord.toUpperCase()} is correct word`,
+    icon: "success",
+    confirmButtonText: "Next Word",
+  });
   initgame();
 };
 
