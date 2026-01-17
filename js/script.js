@@ -15,7 +15,12 @@ const initTime = (maxtime) => {
       timeText.innerText = maxtime + "s";
     } else {
       clearInterval(timer);
-      alert(`Time up! ${correctwords.toUpperCase()} was the correct word`);
+      Swal.fire({
+        title: "Time UP!",
+        text: `${correctwords.toUpperCase()} was the correct word`,
+        icon: "info",
+        confirmButtonText: "OK",
+      });
       initgame(); // restarting the game after time is up
     }
   }, 1000);
