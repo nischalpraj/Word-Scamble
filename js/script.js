@@ -44,15 +44,18 @@ const initgame = () => {
 };
 initgame();
 
-const checkWord = () => {
+const checkWord = async () => {
   let userWord = inputField.value.toLocaleLowerCase(); //getting user value
-  if (!userWord)
-    return Swal.fire({
+  if (!userWord) {
+    await Swal.fire({
       title: "Warning",
       text: "Please enter a word to check!",
       icon: "warning",
       confirmButtonText: "OK",
     });
+    return;
+  }
+    
   if (userWord !== correctwords)
     return Swal.fire({
       title: "Wrong!",
