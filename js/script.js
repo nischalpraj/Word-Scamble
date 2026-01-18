@@ -55,7 +55,7 @@ const checkWord = async () => {
     });
     return;
   }
-    
+
   if (userWord !== correctwords) {
     await Swal.fire({
       title: "Wrong!",
@@ -65,14 +65,16 @@ const checkWord = async () => {
     });
     return;
   }
-    
-  Swal.fire({
+
+  const result = await Swal.fire({
     title: "Congratulations!",
     text: `${userWord.toUpperCase()} is correct word`,
     icon: "success",
     confirmButtonText: "Next Word",
   });
-  initgame();
+  if (result.isConfirmed) {
+    initgame();
+  }
 };
 
 refreshBtn.addEventListener("click", initgame);
