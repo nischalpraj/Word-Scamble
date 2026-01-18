@@ -71,3 +71,8 @@ const checkWord = () => {
 
 refreshBtn.addEventListener("click", initgame);
 checkBtn.addEventListener("click", checkWord);
+inputField.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    checkWord();
+  }
+});
