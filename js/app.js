@@ -1,169 +1,205 @@
 const words = [
+  // 🟢 EASY WORDS (20)
   {
-    word: "orange",
-    hint: "A citrus fruit and a color",
+    word: "apple",
+    hint: "A red or green fruit",
   },
   {
-    word: "grapes",
-    hint: "Small round fruits in bunches",
+    word: "house",
+    hint: "A place where people live",
   },
   {
-    word: "pineapple",
-    hint: "A tropical fruit with rough skin",
+    word: "water",
+    hint: "Essential liquid for life",
   },
   {
-    word: "strawberry",
-    hint: "A red fruit with seeds outside",
+    word: "chair",
+    hint: "Furniture used for sitting",
   },
   {
-    word: "watermelon",
-    hint: "A large green fruit with red inside",
-  },
-
-  {
-    word: "notebook",
-    hint: "Used to write notes",
+    word: "bread",
+    hint: "Food made from flour",
   },
   {
-    word: "pencil",
-    hint: "Used for writing and drawing",
+    word: "table",
+    hint: "Furniture with a flat top",
   },
   {
-    word: "eraser",
-    hint: "Used to remove pencil marks",
+    word: "phone",
+    hint: "Device used for calling",
   },
   {
-    word: "backpack",
-    hint: "Used to carry books",
+    word: "clock",
+    hint: "Shows the time",
   },
   {
-    word: "uniform",
-    hint: "Clothes worn at school",
-  },
-
-  {
-    word: "planet",
-    hint: "Earth is one of these",
+    word: "music",
+    hint: "Organized sound",
   },
   {
-    word: "galaxy",
-    hint: "A system of stars",
+    word: "river",
+    hint: "A flowing body of water",
   },
   {
-    word: "rocket",
-    hint: "Used to travel to space",
+    word: "plant",
+    hint: "A living green organism",
   },
   {
-    word: "astronaut",
-    hint: "A person who travels to space",
+    word: "light",
+    hint: "Opposite of darkness",
   },
   {
-    word: "satellite",
-    hint: "Moves around a planet",
-  },
-
-  {
-    word: "ocean",
-    hint: "A very large body of water",
+    word: "stone",
+    hint: "A small piece of rock",
   },
   {
-    word: "desert",
-    hint: "A very dry place",
+    word: "cloud",
+    hint: "Visible mass of water vapor",
   },
   {
-    word: "forest",
-    hint: "A place full of trees",
+    word: "smile",
+    hint: "A happy facial expression",
   },
   {
-    word: "island",
-    hint: "Land surrounded by water",
+    word: "paper",
+    hint: "Material used for writing",
   },
   {
-    word: "valley",
-    hint: "Low land between mountains",
-  },
-
-  {
-    word: "doctor",
-    hint: "Treats sick people",
+    word: "green",
+    hint: "Color of grass",
   },
   {
-    word: "engineer",
-    hint: "Designs and builds things",
-  },
-  {
-    word: "farmer",
-    hint: "Grows crops and food",
-  },
-  {
-    word: "police",
-    hint: "Maintains law and order",
-  },
-  {
-    word: "pilot",
-    hint: "Flies an airplane",
-  },
-
-  {
-    word: "bicycle",
-    hint: "A two-wheeled vehicle",
-  },
-  {
-    word: "airplane",
-    hint: "Flies in the sky",
-  },
-  {
-    word: "helicopter",
-    hint: "An aircraft with rotating blades",
+    word: "drink",
+    hint: "Liquid you consume",
   },
   {
     word: "train",
     hint: "Runs on tracks",
   },
   {
-    word: "subway",
-    hint: "An underground train",
+    word: "bread",
+    hint: "Baked food made from flour",
   },
 
+  // 🔴 HARD WORDS (30)
   {
-    word: "puzzle",
-    hint: "A game that makes you think",
+    word: "quarantine",
+    hint: "Isolation to prevent disease spread",
   },
   {
-    word: "strategy",
-    hint: "A plan to win",
+    word: "labyrinth",
+    hint: "A complex maze",
   },
   {
-    word: "challenge",
-    hint: "Something difficult to do",
+    word: "cryptography",
+    hint: "Secure communication methods",
   },
   {
-    word: "victory",
-    hint: "Winning the game",
+    word: "bureaucracy",
+    hint: "System with excessive rules",
   },
   {
-    word: "score",
-    hint: "Points earned in a game",
-  },
-
-  {
-    word: "festival",
-    hint: "A special celebration",
+    word: "mnemonic",
+    hint: "Memory-assisting technique",
   },
   {
-    word: "holiday",
-    hint: "A day of rest or celebration",
+    word: "counterintuitive",
+    hint: "Opposite of common sense",
   },
   {
-    word: "birthday",
-    hint: "Celebrated once a year",
+    word: "metamorphosis",
+    hint: "Complete transformation",
   },
   {
-    word: "invitation",
-    hint: "Asking someone to come",
+    word: "onomatopoeia",
+    hint: "Words that imitate sounds",
   },
   {
-    word: "celebration",
-    hint: "A joyful event",
+    word: "photosynthesis",
+    hint: "How plants make food",
+  },
+  {
+    word: "indistinguishable",
+    hint: "Impossible to tell apart",
+  },
+  {
+    word: "extraordinary",
+    hint: "Very unusual or remarkable",
+  },
+  {
+    word: "inconsequential",
+    hint: "Not important",
+  },
+  {
+    word: "circumference",
+    hint: "Distance around a circle",
+  },
+  {
+    word: "thermodynamics",
+    hint: "Study of heat and energy",
+  },
+  {
+    word: "neuroplasticity",
+    hint: "Brain's ability to change",
+  },
+  {
+    word: "simultaneously",
+    hint: "At the same time",
+  },
+  {
+    word: "indefatigable",
+    hint: "Never tiring",
+  },
+  {
+    word: "phenomenology",
+    hint: "Study of conscious experience",
+  },
+  {
+    word: "disproportionate",
+    hint: "Too large or too small compared to something",
+  },
+  {
+    word: "unintelligible",
+    hint: "Impossible to understand",
+  },
+  {
+    word: "unprecedented",
+    hint: "Never happened before",
+  },
+  {
+    word: "idiosyncrasy",
+    hint: "A unique personal trait",
+  },
+  {
+    word: "multidimensional",
+    hint: "Having many dimensions",
+  },
+  {
+    word: "counterproductive",
+    hint: "Having the opposite effect",
+  },
+  {
+    word: "reconnaissance",
+    hint: "Exploration to gather information",
+  },
+  {
+    word: "indispensable",
+    hint: "Absolutely necessary",
+  },
+  {
+    word: "conscientious",
+    hint: "Wishing to do what is right",
+  },
+  {
+    word: "incomprehensible",
+    hint: "Impossible to understand",
+  },
+  {
+    word: "heterogeneous",
+    hint: "Made of different kinds",
+  },
+  {
+    word: "interdisciplinary",
+    hint: "Involving multiple fields",
   },
 ];

@@ -52,6 +52,7 @@ const checkWord = async () => {
       text: "Please enter a word to check!",
       icon: "warning",
       confirmButtonText: "OK",
+      allowEnterKey: true,
     });
     return;
   }
@@ -62,6 +63,7 @@ const checkWord = async () => {
       text: `${userWord.toUpperCase()} is not a correct word`,
       icon: "error",
       confirmButtonText: "Try Again",
+      allowEnterKey: true,
     });
     return;
   }
@@ -71,6 +73,7 @@ const checkWord = async () => {
     text: `${userWord.toUpperCase()} is correct word`,
     icon: "success",
     confirmButtonText: "Next Word",
+    allowEnterKey: true,
   });
   if (result.isConfirmed) {
     initgame();
@@ -80,7 +83,8 @@ const checkWord = async () => {
 refreshBtn.addEventListener("click", initgame);
 checkBtn.addEventListener("click", checkWord);
 inputField.addEventListener("keydown", (e) => {
-  if (e.key == "Enter") {
+  if (e.key === "Enter") {
+    e.preventDefault(); // prevents unwanted behavior
     checkWord();
   }
 });
