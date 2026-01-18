@@ -56,13 +56,16 @@ const checkWord = async () => {
     return;
   }
     
-  if (userWord !== correctwords)
-    return Swal.fire({
+  if (userWord !== correctwords) {
+    await Swal.fire({
       title: "Wrong!",
       text: `${userWord.toUpperCase()} is not a correct word`,
       icon: "error",
       confirmButtonText: "Try Again",
     });
+    return;
+  }
+    
   Swal.fire({
     title: "Congratulations!",
     text: `${userWord.toUpperCase()} is correct word`,
